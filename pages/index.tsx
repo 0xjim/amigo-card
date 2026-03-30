@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Amigo - The crypto card for how you actually live</title>
         <meta name="description" content="Spend anywhere. Earn back on health, travel, and longevity. Pay back on-chain, from your own wallet." />
-        <link rel="icon" href="/favicon.ico" />
+
       </Head>
 
       <section className={styles.hero}>
