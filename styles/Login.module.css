@@ -1,0 +1,139 @@
+/* ── Page shell ── */
+.page {
+  min-height: 100vh;
+  background: #f5f3ee;
+  background-image: url('/images/grid-bg.png');
+  background-repeat: repeat;
+  background-size: 100% auto;
+}
+
+/* ── Card container ── */
+.card {
+  max-width: 520px;
+  margin: 80px auto 60px;
+  background: white;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  padding: 48px 48px 52px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ── Typography ── */
+.heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.subheading {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #888;
+  margin: 0 0 36px 0;
+}
+
+.subheading a {
+  color: #c8c3df;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #c8c3df;
+}
+
+.subheading a:hover {
+  color: #a9a3c4;
+}
+
+/* ── Form ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fieldLabel {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 17px;
+  color: #1a1a1a;
+  background: white;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+  color: #999;
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+.input:focus {
+  border-color: #c8c3df;
+  box-shadow: 0 0 0 3px rgba(200, 195, 223, 0.3);
+}
+
+/* ── Submit button ── */
+.submitBtn {
+  width: 100%;
+  padding: 18px;
+  background: #1a1a1a;
+  color: white;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submitBtn:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Animation ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .card {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 32px 24px 40px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}

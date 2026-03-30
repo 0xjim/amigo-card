@@ -1,0 +1,128 @@
+.navbar {
+  background: #f5f3ee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLink {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navLink:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+.walletBtn {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  background: #c8c3df;
+  border-radius: 100px;
+  padding: 14px 28px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.walletBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px #1a1a1a;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.menuBar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 1px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 24px;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #f5f3ee;
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .navLinksOpen {
+    display: flex;
+  }
+
+  .walletBtn {
+    text-align: center;
+  }
+}
