@@ -1,0 +1,64 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 40px 10px 60px;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translate(-4px, -6px);
+}
+
+.smiley1 {
+  position: absolute;
+  top: 0;
+  left: -8%;
+  width: 13%;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  animation: float 3s ease-in-out infinite;
+}
+
+.smiley2 {
+  position: absolute;
+  top: -6%;
+  right: 4%;
+  width: 11%;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.smiley3 {
+  position: absolute;
+  bottom: -4%;
+  right: -6%;
+  width: 14%;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  animation: float 3s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smiley1,
+  .smiley2,
+  .smiley3 {
+    animation: none;
+  }
+}

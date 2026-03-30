@@ -1,0 +1,203 @@
+/* ── Page shell ── */
+.page {
+  min-height: 100vh;
+  background: #f5f3ee;
+  background-image: url('/images/grid-bg.png');
+  background-repeat: repeat;
+  background-size: 100% auto;
+  padding-bottom: 80px;
+}
+
+/* ── Shared card style ── */
+.card {
+  max-width: 785px;
+  margin: 40px auto 0;
+  background: white;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  padding: 40px 60px 48px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ── Summary card ── */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 80px;
+}
+
+.summaryItem {}
+
+.summaryLabel {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.summaryValue {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* ── Action buttons row ── */
+.actions {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.actionBtn {
+  flex: 1;
+  padding: 16px 24px;
+  background: #c8c3df;
+  color: white;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.actionBtn:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* ── Transaction history ── */
+.transactionsCard {
+  composes: card;
+  margin-top: 32px;
+  padding: 32px 60px 40px;
+  animation-delay: 0.1s;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #888;
+  text-align: left;
+  padding: 0 0 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table td {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 17px;
+  color: #1a1a1a;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table tr:last-child td {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.seeAll {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 17px;
+  color: #c8c3df;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  transition: color 0.2s ease;
+}
+
+.seeAll:hover {
+  color: #a9a3c4;
+}
+
+/* ── Animation ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .transactionsCard {
+    animation: none;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .card,
+  .transactionsCard {
+    max-width: 90%;
+    padding: 32px 32px 40px;
+  }
+
+  .summaryValue {
+    font-size: 32px;
+  }
+
+  .summaryGrid {
+    gap: 28px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card,
+  .transactionsCard {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 20px 32px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .summaryValue {
+    font-size: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tableWrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table th,
+  .table td {
+    white-space: nowrap;
+    padding-right: 16px;
+  }
+}

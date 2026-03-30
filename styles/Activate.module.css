@@ -1,0 +1,150 @@
+/* ── Page shell ── */
+.page {
+  min-height: 100vh;
+  background: #f5f3ee;
+  background-image: url('/images/grid-bg.png');
+  background-repeat: repeat;
+  background-size: 100% auto;
+}
+
+/* ── Card container ── */
+.card {
+  max-width: 970px;
+  margin: 40px auto 60px;
+  background: white;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  padding: 48px 60px 60px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ── Typography ── */
+.heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+
+.subheading {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #444;
+  line-height: 1.5;
+  margin: 0 0 36px 0;
+}
+
+/* ── Form fields ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input {
+  width: 100%;
+  padding: 18px 24px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 18px;
+  color: #1a1a1a;
+  background: white;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+  color: #999;
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+.input:focus {
+  border-color: #c8c3df;
+  box-shadow: 0 0 0 3px rgba(200, 195, 223, 0.3);
+}
+
+/* ── Submit button ── */
+.submitBtn {
+  width: 100%;
+  padding: 18px;
+  background: #c8c3df;
+  color: white;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  border-radius: 42px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 8px;
+}
+
+.submitBtn:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Disclaimer ── */
+.disclaimer {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+  margin-top: 32px;
+}
+
+/* ── Animation ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .card {
+    max-width: 90%;
+    padding: 40px 40px 48px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 95%;
+    margin: 24px auto 40px;
+    padding: 32px 24px 40px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 17px;
+  }
+
+  .input {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+}
